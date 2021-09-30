@@ -1,0 +1,30 @@
+p::first-letter{
+    font-size: 3em;
+}
+p::first-line{
+    color: blueviolet;
+}
+.footer::before{
+    content: '>>';
+}
+
+ul li{
+    display:inline;
+}
+
+li::after{
+    content: ' > ';
+}
+
+li:last-child::after{
+    content: '';
+}
+
+ul li:hover{
+    background-color: cyan;
+}
+
+ul li:focus-visible{
+    background-color: darkgreen;
+    border: 2px blue solid;
+}

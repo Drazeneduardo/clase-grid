@@ -1,0 +1,19 @@
+.container{
+    display: grid;
+    background-color: darksalmon;
+    /*si la ultima es 20 las demas se reparten el resto de espacio*/
+    grid-template-columns: auto auto 60%;
+    /*los que no tengan especificado el alto del row */
+    grid-template-rows: 200px;
+    /*Justifi content los auto van a ocupar lo minimo necesario*/
+    justify-content: space-between;
+    /*para que el align content nos funcione, tenemos que tener un height definido*/
+    height: 60vh;
+    align-content: space-around;
+
+}
+
+.child{
+    background-color: darkorchid;
+    border: darkviolet 2px solid;
+}

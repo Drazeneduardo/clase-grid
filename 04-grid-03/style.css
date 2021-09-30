@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    background-color: rgb(122, 233, 128);
+    /*si la ultima es 20 las demas se reparten el resto de espacio*/
+    grid-template-columns: auto auto auto auto;
+    /*los que no tengan especificado el alto del row */
+    grid-template-rows: 200px auto;
+
+
+
+}
+
+.child {
+    margin-top: 5%;
+    background-color: rgb(50, 204, 58);
+    border: rgb(0, 211, 81) 2px solid;
+}
+
+.child:nth-child(2){
+    background-color: honeydew;
+    /*fila inicial/columna inicial/fila final/columna final
+    pueden o no usar span, es indistinto*/
+    grid-area: 1 / 1 / 4 / 4;
+}
+

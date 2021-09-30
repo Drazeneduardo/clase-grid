@@ -1,0 +1,34 @@
+.container {
+    display: grid;
+    background-color: rgb(122, 233, 128);
+    /*si la ultima es 20 las demas se reparten el resto de espacio*/
+    grid-template-columns: auto auto auto auto;
+    /*los que no tengan especificado el alto del row */
+    grid-template-rows: 200px auto;
+
+
+
+}
+
+.child {
+    margin-top: 5%;
+    background-color: rgb(204, 50, 58);
+    border: rgb(0, 179, 211) 2px solid;
+}
+
+.child:first-child {
+    background-color: rgb(159, 182, 159);
+    /*Hay que considerar las lineas externas para esto.. o sea que ocuparia el espacio de 2 de sus hermanos*/
+    grid-column: 1 / 3;
+
+}
+
+.child:nth-child(5) {
+    background-color: gold;
+    /*Esto va a arrancar desde la segunda línea y ocupar el espacio de dos hermanos nuevamente*/
+    /*El primer numero es la posición, el segundo cuantas posiciones ocupa*/
+    grid-column: 2 / span 2;
+    /*Este height va a afectar a todo su row*/
+    height: 30px;
+
+}
